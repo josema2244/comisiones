@@ -1,0 +1,51 @@
+<main class="contenedor">
+  <h1>Cálculo de Comisiones</h1>
+  <p class="subtitulo">Selecciona un rango de fechas para calcular la comisión de cada vendedor.</p>
+
+  <form class="filtros" (ngSubmit)="calcular()">
+    <label>
+      Fecha inicio
+      <input type="date" name="fechaInicio" [(ngModel)]="fechaInicio">
+    </label>
+
+    <label>
+      Fecha fin
+      <input type="date" name="fechaFin" [(ngModel)]="fechaFin">
+    </label>
+
+    <button type="submit" [disabled]="cargando">
+      {{ cargando ? 'Calculando...' : 'Calcular Comisiones' }}
+    </button>
+  </form>
+
+  <p class="error" *ngIf="error">{{ error }}</p>
+
+  <table *ngIf="resultados.length > 0">
+    <thead>
+      <tr>
+        <th>Vendedor</th>
+        <th>Total vendido</th>
+        <th>Porcentaje</th>
+        <th>Comisión</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fila of resultados">
+        <td>{{ fila.vendedor }}</td>
+        <td>{{ fila.totalVendido | currency }}</td>
+        <td>{{ fila.porcentaje }}%</td>
+        <td>{{ fila.comision | currency }}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3">Total comisiones</td>
+        <td>{{ totalComisiones | currency }}</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <p class="vacio" *ngIf="consultado && resultados.length === 0">
+    No hay ventas en ese rango de fechas.
+  </p>
+</main>
