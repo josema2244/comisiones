@@ -71,3 +71,6 @@ La API tiene dos rutas:
 ## Autor
 
 José Jáuregui, estudiante de Ingeniería de Software en la Universidad de las Américas.
+
+## Link video
+https://youtu.be/TQnqsv1q3Vo
