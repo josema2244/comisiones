@@ -3,16 +3,17 @@
   margin: 40px auto;
   padding: 0 16px;
   font-family: Arial, sans-serif;
-  color: #1f2937;
+  color: #222;
 }
 
 h1 {
-  margin-bottom: 4px;
+  font-size: 28px;
+  margin-bottom: 6px;
 }
 
 .subtitulo {
   margin-bottom: 24px;
-  color: #6b7280;
+  color: #666;
 }
 
 .filtros {
@@ -28,27 +29,25 @@ h1 {
   flex-direction: column;
   gap: 4px;
   font-size: 14px;
-  font-weight: bold;
 }
 
 .filtros input {
-  padding: 8px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
+  padding: 7px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
 }
 
 .filtros button {
-  padding: 10px 18px;
+  padding: 9px 16px;
   border: none;
-  border-radius: 6px;
-  background: #2563eb;
+  border-radius: 4px;
+  background: #1f3a5f;
   color: #fff;
-  font-weight: bold;
   cursor: pointer;
 }
 
 .filtros button:disabled {
-  background: #93c5fd;
+  background: #8a9bb0;
   cursor: not-allowed;
 }
 
@@ -59,24 +58,23 @@ table {
 
 th,
 td {
-  padding: 10px;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 12px;
   text-align: left;
+  border: none;
 }
 
 th {
-  background: #f3f4f6;
+  background: #eee;
 }
 
 tfoot td {
   font-weight: bold;
-  background: #f9fafb;
 }
 
 .error {
-  color: #b91c1c;
+  color: #b00020;
 }
 
 .vacio {
-  color: #6b7280;
+  color: #666;
 }
